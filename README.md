@@ -18,7 +18,7 @@ Reads `vocabulary.csv` (columns: `PRINCIPAL PARTS` and `DEFINITION`) and generat
 
 ### `LINUXstitcher.py`
 Combines whichever `vocab_part_X.wav` files you choose into one compressed `master.m4a` file. 
-**Linux only** — it calls the `ffmpeg` command directly using a method that doesn't play nice with Windows file paths. If you're not on Linux, use `stitcher_cross_platform.py` instead. 
+**Linux only** — it calls the `ffmpeg` command directly using a method that doesn't play nice with Windows file paths. If you're not on Linux, use `combine.py` instead. 
 
 To use LUNUXstitcher you also need **FFmpeg** installed and on your system PATH:
 
@@ -27,7 +27,7 @@ To use LUNUXstitcher you also need **FFmpeg** installed and on your system PATH:
 - **Windows:** download from ffmpeg.org and add its `bin` folder to your PATH (Wouldnt reccomenD installing FFMPEG just for this)
 
 ### `stitcher_cross_platform.py`
-Does the same job as `LINUXstitcher.py` — combines your `vocab_part_N.wav` files into one compressed file — but works identically on **Windows, macOS, and Linux**.
+Does the same job as `LINUXcombine.py` — combines your `vocab_part_X.wav` files into one compressed file — but works identically on **Windows, macOS, and Linux**.
 
 ## How to Use
 
@@ -40,7 +40,7 @@ Does the same job as `LINUXstitcher.py` — combines your `vocab_part_N.wav` fil
 2. Run the stitcher that matches your OS:
    ```bash
    python LINUXstitcher.py            # Linux only
-   python stitcher_cross_platform.py  # any OS
+   python combine.py                 # any OS
    ```
    When prompted, enter which parts to combine, e.g. `1, 2, 3` or `1-300`.
 
