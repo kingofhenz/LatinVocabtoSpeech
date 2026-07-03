@@ -14,27 +14,28 @@ pip install pandas gTTS pydub av
 ## What Each File Does
 
 ### `f4.py`
-Reads `vocabulary.csv` (columns: `PRINCIPAL PARTS` and `DEFINITION`) and generates the audio. For each word, it uses Google TTS to read the Latin word out loud (converted to classical pronunciation first), then uses Google TTS again to read the English definition. It saves the results in batches of 50 words as `vocab_part_1.wav`, `vocab_part_2.wav`, etc. Works on any platform.
+Reads `vocabulary.csv` (columns: `PRINCIPAL PARTS` and `DEFINITION`) and generates the audio. For each word, it uses Google TTS to read the Latin word out loud (converted to classical pronunciation ), then uses Google TTS again to read the English definition. It saves the results in batches of 50 words as `vocab_part_1.wav`, `vocab_part_2.wav`, etc. Works on any platform.
 
 ### `LINUXstitcher.py`
-Combines whichever `vocab_part_N.wav` files you choose into one compressed `master.m4a` file. **Linux only** — it calls the `ffmpeg` command directly using a method that doesn't play nice with Windows file paths. If you're not on Linux, use `stitcher_cross_platform.py` instead. 
+Combines whichever `vocab_part_X.wav` files you choose into one compressed `master.m4a` file. 
+**Linux only** — it calls the `ffmpeg` command directly using a method that doesn't play nice with Windows file paths. If you're not on Linux, use `stitcher_cross_platform.py` instead. 
 
 To use LUNUXstitcher you also need **FFmpeg** installed and on your system PATH:
 
 - **Linux:** `sudo apt install ffmpeg`
 - **macOS:** `brew install ffmpeg`
-- **Windows:** download from ffmpeg.org and add its `bin` folder to your PATH
+- **Windows:** download from ffmpeg.org and add its `bin` folder to your PATH (Wouldnt reccomenD installing FFMPEG just for this)
 
 ### `stitcher_cross_platform.py`
 Does the same job as `LINUXstitcher.py` — combines your `vocab_part_N.wav` files into one compressed file — but works identically on **Windows, macOS, and Linux**.
 
 ## How to Use
 
-1. Put `vocabulary.csv` in the same folder as `f4.py`, then run:
+1. Put `vocabulary.csv` in the same folder as `main.py`, then run:
    ```bash
-   python f4.py
+   python main.py
    ```
-   This creates your `vocab_part_N.wav` files.
+   This creates your `vocab_part_X.wav` files.
 
 2. Run the stitcher that matches your OS:
    ```bash
