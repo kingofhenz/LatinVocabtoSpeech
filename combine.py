@@ -20,9 +20,8 @@ def combine_to_m4a(input_pattern="vocab_part_*.wav", output_file="latin_vocabula
     
     output_stream = output_container.add_stream("aac", rate=24000)
     output_stream.bit_rate = 48000  
-    output_stream.layout = "mono" # Force mono. Excellent for voice, saves space.
+    output_stream.layout = "mono" 
 
-    # --- THE FIX: Create an Audio Resampler ---
     # This guarantees every piece of audio perfectly matches the AAC stream's requirements
     resampler = av.AudioResampler(
         format=output_stream.format, 
@@ -40,11 +39,11 @@ def combine_to_m4a(input_pattern="vocab_part_*.wav", output_file="latin_vocabula
             input_audio_stream = input_container.streams.audio[0]
 
             for frame in input_container.decode(input_audio_stream):
-                # Pass the raw frame through our universal translator
+                
                 resampled_frames = resampler.resample(frame)
                 
                 for res_frame in resampled_frames:
-                    res_frame.pts = None # Strip timestamp for sequential writing
+                    res_frame.pts = None 
                     
                     for packet in output_stream.encode(res_frame):
                         output_container.mux(packet)
@@ -56,12 +55,12 @@ def combine_to_m4a(input_pattern="vocab_part_*.wav", output_file="latin_vocabula
             print(f" -> Skipping {file} due to error: {e}")
             skipped_count += 1
 
-    # Flush the resampler (pushes out any last fragments of audio held in its buffer)
+    # Flush the resampler 
     for res_frame in resampler.resample(None):
         for packet in output_stream.encode(res_frame):
             output_container.mux(packet)
 
-    # Flush the encoder (finalizes the file)
+    # Flush the encoder
     for packet in output_stream.encode(None):
         output_container.mux(packet)
 
