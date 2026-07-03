@@ -39,7 +39,7 @@ Does the same job as `LINUXcombine.py` — combines your `vocab_part_X.wav` file
 
 2. Run the stitcher that matches your OS:
    ```bash
-   python LINUXstitcher.py            # Linux only
+   python LINUXcombine.py            # Linux only
    python combine.py                 # any OS
    ```
    When prompted, enter which parts to combine, e.g. `1, 2, 3` or `1-300`.
