@@ -27,7 +27,7 @@ To use LUNUXstitcher you also need **FFmpeg** installed and on your system PATH:
 - **Windows:** download from ffmpeg.org and add its `bin` folder to your PATH (Wouldnt reccomenD installing FFMPEG just for this)
 
 ### `stitcher_cross_platform.py`
-Does the same job as `LINUXcombine.py` — combines your `vocab_part_X.wav` files into one compressed file — but works identically on **Windows, macOS, and Linux**.
+Does the same job as `LINUXcombine.py` — combines your `vocab_part_X.wav` files into one compressed file —  works identically on **Windows, macOS, and Linux**.
 
 ## How to Use
 
@@ -39,12 +39,12 @@ Does the same job as `LINUXcombine.py` — combines your `vocab_part_X.wav` file
 
 2. Run the stitcher that matches your OS:
    ```bash
-   python LINUXcombine.py            # Linux only
-   python combine.py                 # any OS
+   python LINUXcombine.py    # Linux only
+   python combine.py         # any OS
    ```
    When prompted, enter which parts to combine, e.g. `1, 2, 3` or `1-300`.
 
-3. You'll end up with one compressed audio file ready to load onto a phone or player.
+3. You'll end up with one compressed audio file ready to play.
 
 ## Customization
 
