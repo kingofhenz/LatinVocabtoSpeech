@@ -3,7 +3,7 @@ Project is in early developement and hasnt been ran on any OS other than linux. 
 # Latin Vocabulary Audio Generator
 
 Turns a Latin vocabulary CSV into spoken-word study audio then stitches the results into one file.
-https://bridge.haverford.edu/select/Latin/ A VERY good site for finding latin vocabulary lists
+https://bridge.haverford.edu/select/Latin/ - A VERY good site for finding latin vocabulary lists
 
 ## Install
 
@@ -55,9 +55,9 @@ changing this will change the speed on the LATIN ONLY:
    audio_la = change_speed(audio_la, speed=0.95)
    ```
 
-Changing these will change the pause interval after each latin and english word, both times are in milliseconds
+Changing these will change the pause interval after each latin and english word, (both times are in milliseconds
 
  ```bash
     pause_latin_to_eng = AudioSegment.silent(duration=600) 
     pause_between_words = AudioSegment.silent(duration=750)
-    ```
+ ```
