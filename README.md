@@ -3,6 +3,7 @@ Project is in early developement and hasnt been ran on any OS other than linux. 
 # Latin Vocabulary Audio Generator
 
 Turns a Latin vocabulary CSV into spoken-word study audio then stitches the results into one file.
+https://bridge.haverford.edu/select/Latin/ A VERY good site for finding latin vocabulary lists
 
 ## Install
 
