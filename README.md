@@ -13,7 +13,7 @@ pip install pandas gTTS pydub av
 
 ## What Each File Does
 
-### `f4.py`
+### `main.py`
 Reads `vocabulary.csv` (columns: `PRINCIPAL PARTS` and `DEFINITION`) and generates the audio. For each word, it uses Google TTS to read the Latin word out loud (converted to classical pronunciation ), then uses Google TTS again to read the English definition. It saves the results in batches of 50 words as `vocab_part_1.wav`, `vocab_part_2.wav`, etc. Works on any platform.
 
 ### `LINUXstitcher.py`
