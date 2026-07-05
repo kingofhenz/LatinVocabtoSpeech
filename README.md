@@ -1,6 +1,6 @@
 # WARNING
-Project is in early developement and hasnt been ran on any OS other than linux. Please create issues on github as you notice them
-This takes a HUGE amount of time to run because your computer is making tons of requests to a server to get its own custom audio file. this is not an short process can easily finished in an idle night of the computer. For me it took about 4 hours with a 10k word vocabulary list.
+Project is in early developement and hasnt been ran on any OS other than linux. Please create issues on github as you notice them.
+This takes a HUGE amount of time to run because your computer is making tons of requests to a server to get its own custom audio file. this is not an short process but can easily finished in an idle night of the computer. For me it took about 4 hours with a 10k word vocabulary list.
 Shoutout Gemini!(Havent coded in years...sorry)
 # Latin Vocabulary Audio Generator
 
