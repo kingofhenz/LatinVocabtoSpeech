@@ -1,5 +1,7 @@
 # WARNING
 Project is in early developement and hasnt been ran on any OS other than linux. Please create issues on github as you notice them
+This takes a HUGE amount of time to run because your computer is making tons of requests to a server to get its own custom audio file. this is not an easy process but will easily be able to be finished in an idle night of the computer. For me it took about 4 hours
+Shoutout Gemini!(Havent coded in years...sorry)
 # Latin Vocabulary Audio Generator
 
 Turns a Latin vocabulary CSV into spoken-word study audio then stitches the results into one file.
