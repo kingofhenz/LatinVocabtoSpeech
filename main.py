@@ -3,6 +3,7 @@ from gtts import gTTS
 from pydub import AudioSegment
 import io
 import time
+import random
 
 def clean_latin(text):
     return text.strip()
@@ -87,8 +88,8 @@ for i in range(0, len(df), chunk_size):
             # 3. Stitch them together
             combined_audio += audio_la + pause_latin_to_eng + audio_en + pause_between_words
             
-            # Small delay to prevent rate limits
-            time.sleep(0.9)
+            # Random delay between 0.25 and 0.75 seconds to prevent rate limits
+            time.sleep(random.uniform(0.25, 0.75))
             
         except Exception as e:
             print(f" -> Error reading '{latin_word}': {e}")
