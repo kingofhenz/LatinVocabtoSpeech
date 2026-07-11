@@ -1,3 +1,5 @@
+# WARNING:FULL & BETTER RE-WRITE COMING SOON
+## WARNING:FULL & BETTER RE-WRITE COMING SOON
 # WARNING
 Project is in early developement and hasnt been ran on any OS other than linux. Please create issues on github as you notice them.
 
